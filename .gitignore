@@ -10,3 +10,5 @@ data_*/
 
 # Mac-specific ignores
 *.DS_Store
+
+*.dmg
