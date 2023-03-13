@@ -242,9 +242,139 @@ resizable = true
 mode = 0
 access = 2
 
+[node name="ButtonCalculate" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -115.0
+margin_top = -32.0
+margin_right = 115.0
+margin_bottom = 32.0
+text = "Calculate MD5 hashes for files"
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -466.0
+margin_top = -141.0
+margin_right = 466.0
+margin_bottom = -99.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer2"]
+margin_right = 932.0
+margin_bottom = 42.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2/HBoxContainer"]
+margin_right = 180.0
+margin_bottom = 42.0
+
+[node name="Label" type="Label" parent="MarginContainer2/HBoxContainer/VBoxContainer"]
+margin_right = 180.0
+margin_bottom = 14.0
+text = "MD5 hash for 1 file:"
+align = 1
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer2/HBoxContainer/VBoxContainer"]
+margin_top = 18.0
+margin_right = 180.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 180, 0 )
+
+[node name="HSplitContainer" type="HSplitContainer" parent="MarginContainer2/HBoxContainer"]
+margin_left = 184.0
+margin_right = 184.0
+margin_bottom = 42.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer2/HBoxContainer"]
+margin_left = 188.0
+margin_right = 368.0
+margin_bottom = 42.0
+
+[node name="Label" type="Label" parent="MarginContainer2/HBoxContainer/VBoxContainer2"]
+margin_right = 180.0
+margin_bottom = 14.0
+text = "MD5 hash for 2 file:"
+align = 1
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer2/HBoxContainer/VBoxContainer2"]
+margin_top = 18.0
+margin_right = 180.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 180, 0 )
+
+[node name="HSplitContainer2" type="HSplitContainer" parent="MarginContainer2/HBoxContainer"]
+margin_left = 372.0
+margin_right = 372.0
+margin_bottom = 42.0
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer2/HBoxContainer"]
+margin_left = 376.0
+margin_right = 556.0
+margin_bottom = 42.0
+
+[node name="Label" type="Label" parent="MarginContainer2/HBoxContainer/VBoxContainer3"]
+margin_right = 180.0
+margin_bottom = 14.0
+text = "MD5 hash for 3 file:"
+align = 1
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer2/HBoxContainer/VBoxContainer3"]
+margin_top = 18.0
+margin_right = 180.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 180, 0 )
+
+[node name="HSplitContainer3" type="HSplitContainer" parent="MarginContainer2/HBoxContainer"]
+margin_left = 560.0
+margin_right = 560.0
+margin_bottom = 42.0
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="MarginContainer2/HBoxContainer"]
+margin_left = 564.0
+margin_right = 744.0
+margin_bottom = 42.0
+
+[node name="Label" type="Label" parent="MarginContainer2/HBoxContainer/VBoxContainer4"]
+margin_right = 180.0
+margin_bottom = 14.0
+text = "MD5 hash for 4 file:"
+align = 1
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer2/HBoxContainer/VBoxContainer4"]
+margin_top = 18.0
+margin_right = 180.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 180, 0 )
+
+[node name="HSplitContainer4" type="HSplitContainer" parent="MarginContainer2/HBoxContainer"]
+margin_left = 748.0
+margin_right = 748.0
+margin_bottom = 42.0
+
+[node name="VBoxContainer5" type="VBoxContainer" parent="MarginContainer2/HBoxContainer"]
+margin_left = 752.0
+margin_right = 932.0
+margin_bottom = 42.0
+
+[node name="Label" type="Label" parent="MarginContainer2/HBoxContainer/VBoxContainer5"]
+margin_right = 180.0
+margin_bottom = 14.0
+text = "MD5 hash for 5 file:"
+align = 1
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer2/HBoxContainer/VBoxContainer5"]
+margin_top = 18.0
+margin_right = 180.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 180, 0 )
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer2/Button2" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer3/Button3" to="." method="_on_Button3_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer4/Button4" to="." method="_on_Button4_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer5/Button5" to="." method="_on_Button5_pressed"]
 [connection signal="file_selected" from="FileDialog" to="." method="_on_FileDialog_file_selected"]
+[connection signal="pressed" from="ButtonCalculate" to="." method="_on_ButtonCalculate_pressed"]
